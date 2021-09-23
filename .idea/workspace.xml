@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2bd0a1-e9f7-46ab-9d50-2ba098b2072a" name="Changes" comment="Changed" />
+    <list default="true" id="6e2bd0a1-e9f7-46ab-9d50-2ba098b2072a" name="Changes" comment="index.py Removed. requirements.txt changed.">
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +32,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632424474967</updated>
-      <workItem from="1632424476269" duration="1234000" />
+      <workItem from="1632424476269" duration="1343000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1632424604442</created>
@@ -67,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632425462618</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="index.py Removed. requirements.txt changed.">
+      <created>1632425764796</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632425764796</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +96,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="d" />
     <MESSAGE value="Changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed" />
+    <MESSAGE value="index.py Removed. requirements.txt changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="index.py Removed. requirements.txt changed." />
   </component>
 </project>
