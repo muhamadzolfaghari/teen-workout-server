@@ -1,5 +1,4 @@
 from django.urls import path, include
-from .views import UserList, UserDetail, UserDetailUpdate, UserDetailDestroy, UserDetailCreate
 from loginapp.views import GoogleLogin
 
 app_name = 'api'
