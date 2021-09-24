@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e2bd0a1-e9f7-46ab-9d50-2ba098b2072a" name="Changes" comment="vercel.json added.">
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalsite/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalsite/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalsite/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalsite/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalsite/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel_app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalsite/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalsite/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalsite/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalsite/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalsite/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercelapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercelapp/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercelapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercelapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercelapp/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +33,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1yYNHbVPGdbuwf9jJhuN15Ll5oq" />
+  <component name="ProjectId" id="1yaeHLJKdBLP7HAqMKLmYq4hq9p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,69 +44,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Muhamad\Desktop\teen-workout-server" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e2bd0a1-e9f7-46ab-9d50-2ba098b2072a" name="Changes" comment="" />
-      <created>1632424474967</created>
+      <changelist id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="" />
+      <created>1632494036977</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632424474967</updated>
-      <workItem from="1632424476269" duration="3087000" />
+      <updated>1632494036977</updated>
+      <workItem from="1632494039722" duration="158000" />
     </task>
-    <task id="LOCAL-00001" summary="d">
-      <created>1632424604442</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1632424604442</updated>
-    </task>
-    <task id="LOCAL-00002" summary="d">
-      <created>1632424609002</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1632424609002</updated>
-    </task>
-    <task id="LOCAL-00003" summary="d">
-      <created>1632425224152</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1632425224152</updated>
-    </task>
-    <task id="LOCAL-00004" summary="d">
-      <created>1632425448790</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1632425448790</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Changed">
-      <created>1632425462618</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1632425462618</updated>
-    </task>
-    <task id="LOCAL-00006" summary="index.py Removed. requirements.txt changed.">
-      <created>1632425764796</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1632425764796</updated>
-    </task>
-    <task id="LOCAL-00007" summary="vercel.json added.">
-      <created>1632425849296</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1632425849296</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,12 +76,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="d" />
-    <MESSAGE value="Changed" />
-    <MESSAGE value="index.py Removed. requirements.txt changed." />
-    <MESSAGE value="vercel.json added." />
-    <option name="LAST_COMMIT_MESSAGE" value="vercel.json added." />
   </component>
 </project>
