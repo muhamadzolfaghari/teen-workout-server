@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="Check for finalsite project.">
-      <change beforePath="$PROJECT_DIR$/finalsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/finalsite/urls.py" afterDir="false" />
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="The some urls inside urls.py in finallapp commented.">
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel_app/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel_app/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632494036977</updated>
-      <workItem from="1632494039722" duration="481000" />
+      <workItem from="1632494039722" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -47,7 +51,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632494213821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Check for finalsite project.">
+      <created>1632494529746</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632494529746</updated>
+    </task>
+    <task id="LOCAL-00003" summary="The some urls inside urls.py in finallapp commented.">
+      <created>1632494613562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632494613562</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,6 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Check for finalsite project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Check for finalsite project." />
+    <MESSAGE value="The some urls inside urls.py in finallapp commented." />
+    <option name="LAST_COMMIT_MESSAGE" value="The some urls inside urls.py in finallapp commented." />
   </component>
 </project>
