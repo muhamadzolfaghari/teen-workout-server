@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="The api added to project." />
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="loginapp added.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +39,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632494036977</updated>
-      <workItem from="1632494039722" duration="3061000" />
+      <workItem from="1632494039722" duration="4110000" />
+      <workItem from="1632500230768" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -80,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632496820543</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="loginapp added.">
+      <created>1632497175102</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1632497175102</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Check for finalsite project." />
@@ -103,6 +115,7 @@
     <MESSAGE value="The second test for deploy." />
     <MESSAGE value="The third test" />
     <MESSAGE value="The api added to project." />
-    <option name="LAST_COMMIT_MESSAGE" value="The api added to project." />
+    <MESSAGE value="loginapp added." />
+    <option name="LAST_COMMIT_MESSAGE" value="loginapp added." />
   </component>
 </project>
