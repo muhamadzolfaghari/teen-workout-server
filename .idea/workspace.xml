@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="django-allauth package added." />
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="django-allauth package added.&#10;third tries" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632494036977</updated>
       <workItem from="1632494039722" duration="4110000" />
-      <workItem from="1632500230768" duration="1252000" />
+      <workItem from="1632500230768" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -95,7 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632501777571</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="django-allauth package added.&#10;second changes">
+      <created>1632501854210</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1632501854210</updated>
+    </task>
+    <task id="LOCAL-00010" summary="django-allauth package added.&#10;third tries">
+      <created>1632501938073</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1632501938073</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +135,8 @@
     <MESSAGE value="The api added to project." />
     <MESSAGE value="loginapp added." />
     <MESSAGE value="django-allauth package added." />
-    <option name="LAST_COMMIT_MESSAGE" value="django-allauth package added." />
+    <MESSAGE value="django-allauth package added.&#10;second changes" />
+    <MESSAGE value="django-allauth package added.&#10;third tries" />
+    <option name="LAST_COMMIT_MESSAGE" value="django-allauth package added.&#10;third tries" />
   </component>
 </project>
