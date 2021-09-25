@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'example',
 #     'api',
 #     'loginapp'
+
 ]
 
 MIDDLEWARE = [
