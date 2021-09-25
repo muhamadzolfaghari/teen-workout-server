@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="django-allauth package added.&#10;third tries" />
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="settings.py changed.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632494036977</updated>
       <workItem from="1632494039722" duration="4110000" />
-      <workItem from="1632500230768" duration="1577000" />
+      <workItem from="1632500230768" duration="4623000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632501938073</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="settings.py changed.">
+      <created>1632502377813</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1632502377813</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +147,7 @@
     <MESSAGE value="django-allauth package added." />
     <MESSAGE value="django-allauth package added.&#10;second changes" />
     <MESSAGE value="django-allauth package added.&#10;third tries" />
-    <option name="LAST_COMMIT_MESSAGE" value="django-allauth package added.&#10;third tries" />
+    <MESSAGE value="settings.py changed." />
+    <option name="LAST_COMMIT_MESSAGE" value="settings.py changed." />
   </component>
 </project>
