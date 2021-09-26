@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b20e9dec-f199-492a-8734-cd6d32036165" name="Changes" comment="urls.py was updated.">
-      <change beforePath="$PROJECT_DIR$/loginapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="b20e9dec-f199-492a-8734-cd6d32036165" name="Changes" comment="urls.py was updated." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ygUuiZLN7mNxKQsaRiyBfnq87X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,7 +22,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="teen-workout-server" type="Python.DjangoServer" factoryName="Django server">
@@ -59,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632672949097</updated>
       <workItem from="1632672950337" duration="300000" />
+      <workItem from="1632675778338" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="urls.py was updated.">
       <created>1632673015540</created>
@@ -97,6 +97,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Revert &quot;Update urls.py&quot;&#10;&#10;This reverts commit a3a6183a" />
