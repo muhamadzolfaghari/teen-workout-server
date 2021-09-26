@@ -1,8 +1,5 @@
-from django.urls import path, include
-from django.views.generic import TemplateView
-from django.contrib.auth.views import LogoutView
-from django.http import HttpResponse, JsonResponse
-from .views import GoogleLogin
+from django.http import JsonResponse
+from django.urls import path
 
 urlpatterns = [
     path('auth/google/', lambda request: JsonResponse({'value': 'Hello World!'}), name='hello_world')
