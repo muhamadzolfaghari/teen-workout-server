@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="Some file of project was updated.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="setting urls was updated.">
       <change beforePath="$PROJECT_DIR$/loginapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -58,6 +56,7 @@
       <workItem from="1632594856571" duration="975000" />
       <workItem from="1632665367650" duration="3800000" />
       <workItem from="1632672126745" duration="136000" />
+      <workItem from="1632672276680" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632595226584</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="setting urls was updated.">
+      <created>1632672511858</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1632672511858</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +217,7 @@
     <MESSAGE value="settings.py changed." />
     <MESSAGE value="settings.py was changed." />
     <MESSAGE value="Some file of project was updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some file of project was updated." />
+    <MESSAGE value="setting urls was updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="setting urls was updated." />
   </component>
 </project>
