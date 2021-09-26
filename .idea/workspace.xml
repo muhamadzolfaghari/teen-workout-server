@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b748419a-e2fa-40e4-ade7-ba00e2bbbfed" name="Changes" comment="Some file of project was updated.">
-      <change beforePath="$PROJECT_DIR$/vercel_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/vercel_app/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +12,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="a3a6183abf9a5abd80b1124644c19772506fe682" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="api*" />
   </component>
   <component name="ProjectId" id="1yaeHLJKdBLP7HAqMKLmYq4hq9p" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,11 +33,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Muhamad\Desktop\teen-workout-server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\m.zolfaghari\PycharmProjects\test\teen-workout-server" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -41,6 +56,8 @@
       <workItem from="1632494039722" duration="4110000" />
       <workItem from="1632500230768" duration="4623000" />
       <workItem from="1632594856571" duration="975000" />
+      <workItem from="1632665367650" duration="3800000" />
+      <workItem from="1632672126745" duration="136000" />
     </task>
     <task id="LOCAL-00001" summary="Check for finalsite project.">
       <created>1632494213821</created>
@@ -142,11 +159,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="00c20676-84c0-4af7-871c-5b6ea8eb542d">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/m.zolfaghari/PycharmProjects/test/teen-workout-server/api" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="00c20676-84c0-4af7-871c-5b6ea8eb542d" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
