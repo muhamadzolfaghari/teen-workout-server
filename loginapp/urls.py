@@ -1,10 +1,6 @@
-import requests
-from django.conf import settings
-from django.http import HttpResponse
 from django.urls import path
-
-from loginapp.views import Authentication
+from oatuh2.views import OAuth2
 
 urlpatterns = [
-    path('auth/google/<str:access_token>', Authentication.oauth2)
+    path('auth/google/<str:access_token>', OAuth2.get_user_info)
 ]

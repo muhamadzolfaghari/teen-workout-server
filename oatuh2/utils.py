@@ -1,6 +1,3 @@
-import json
-from typing import Any
-
 import requests
 
 
@@ -17,13 +14,16 @@ def verify_access_token(access_token: str):
         return False
 
 
-def user_info_decoder(s: Any):
-    print(s)
-
-def get_user_info(access_token: str):
+def get_user_info(access_token):
     url = f"https://www.googleapis.com/drive/v3/about?fields=user&access_token={access_token}"
     response = requests.get(url)
 
     if response.status_code == 200:
-        json.JSONDecoder.decode(response.json(), user_info_decoder)
+        data = response.json()
+        user = data['user']
+        name = user['displayName']
+        email = user['emailAddress']
+        img = user['photoLink']
+
+        return {"name": name, "email": email, "img": img}
 
