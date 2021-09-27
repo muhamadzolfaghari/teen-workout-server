@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 
-from oatuh2 import utils
+from oauth2 import utils
 
 
 class OAuth2:
