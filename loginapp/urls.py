@@ -1,7 +1,11 @@
 from django.http import JsonResponse
 from django.urls import path
 
-urlpatterns = [
-    path('auth/google/', lambda request: JsonResponse({'value': 'This is new update'}), name='hello_world')
-]
 
+def auth_with_google():
+    return JsonResponse({})
+
+
+urlpatterns = [
+    path('auth/google/', auth_with_google, name='hello_world')
+]
