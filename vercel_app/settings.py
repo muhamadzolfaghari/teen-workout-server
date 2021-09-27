@@ -129,3 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+GOOGLE_OAUTH2_CLIENT_ID = '213873025360-dk75b6uhmd2h67mfdphg3usn8bktcer6.apps.googleusercontent.com'
+
+GOOGLE_OAUTH2_CLIENT_SECRET = 'm9jTPmdH_XpD8lR-jmHkebVC'
