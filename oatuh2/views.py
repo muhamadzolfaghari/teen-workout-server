@@ -8,7 +8,6 @@ class OAuth2:
         user_info = utils.get_user_info(access_token)
 
         if user_info:
-            JsonResponse.status_code = 200
             return JsonResponse(user_info)
         else:
             JsonResponse.status_code = 401
