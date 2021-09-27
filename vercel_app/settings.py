@@ -51,12 +51,7 @@ INSTALLED_APPS = [
 
     'rest_auth',
     'rest_auth.registration',
-    'example',
     'loginapp',
-
-#     'api',
-#     'loginapp'
-
 ]
 
 MIDDLEWARE = [
