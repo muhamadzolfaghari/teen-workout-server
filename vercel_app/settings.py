@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'loginapp',
-    #'data.apps.DataConfig'
+    'data.apps.DataConfig'
 ]
 
 MIDDLEWARE = [
@@ -90,7 +90,12 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }
+}
 
 
 # Password validation
