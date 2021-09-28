@@ -44,19 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
 
     'rest_auth',
     'rest_auth.registration',
     'loginapp',
     #'data.apps.DataConfig'
+
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -64,6 +61,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # cors middlewares
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'vercel_app.urls'
@@ -138,6 +139,5 @@ GOOGLE_OAUTH2_CLIENT_SECRET = 'm9jTPmdH_XpD8lR-jmHkebVC'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3001",
-    "http://localhost:3000",
     "https://teen-workout-server-alpha.vercel.app"
 ]
