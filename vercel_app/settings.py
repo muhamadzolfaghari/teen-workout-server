@@ -142,7 +142,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '{}/media'.format(BASE_DIR)
 
 GOOGLE_OAUTH2_CLIENT_ID = '213873025360-dk75b6uhmd2h67mfdphg3usn8bktcer6.apps.googleusercontent.com'
 
