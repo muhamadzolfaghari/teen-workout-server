@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'loginapp',
+    'data.apps.DataConfig'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,9 @@ STATIC_URL = '/static/'
 GOOGLE_OAUTH2_CLIENT_ID = '213873025360-dk75b6uhmd2h67mfdphg3usn8bktcer6.apps.googleusercontent.com'
 
 GOOGLE_OAUTH2_CLIENT_SECRET = 'm9jTPmdH_XpD8lR-jmHkebVC'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3001",
+    "http://localhost:3000",
+    "https://teen-workout-server-alpha.vercel.app"
+]
