@@ -97,12 +97,14 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'sql6440696',
         'USER': 'sql6440696',
         'PASSWORD': 'Vt7D4zdRDU',
         'HOST': 'sql6.freesqldatabase.com',
         'PORT': '3306',
+
     }
 }
 
