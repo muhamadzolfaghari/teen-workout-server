@@ -44,15 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-
     'rest_auth',
     'rest_auth.registration',
+
+    #our applications
     'loginapp',
-    'data.apps.DataConfig'
+    'data.apps.DataConfig',
+
+    # cors applications
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,7 @@ DATABASES = {
         'NAME': 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
