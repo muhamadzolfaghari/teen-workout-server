@@ -34,7 +34,7 @@ class User(models.Model):
     height = models.IntegerField(null=True)
     weight = models.IntegerField(null=True)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True)
-    age_range_id = models.ForeignKey(AgeRange, on_delete=models.CASCADE, null=True)
+    age_range_id = models.ForeignKey(AgeRange, on_delete=models.CASCADE, null=True, verbose_name='age')
 
     def __str__(self):
         return self.name
