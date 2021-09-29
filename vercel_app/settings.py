@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql6440721',
-        'USER': 'sql6440721',
-        'PASSWORD': 'KEdvssC2DQ',
-        'HOST': 'sql6.freesqldatabase.com',
+        'NAME': 'bv2tocne1ygqdna2mjyb',
+        'USER': 'ucoc6ltpnng50x8f',
+        'PASSWORD': 'S39vsYTxgr9cFv3qp93A',
+        'HOST': 'bv2tocne1ygqdna2mjyb-mysql.services.clever-cloud.com',
         'PORT': '3306',
     }
 }
