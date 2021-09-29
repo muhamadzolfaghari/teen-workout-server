@@ -33,7 +33,7 @@ class User(models.Model):
     image = models.ImageField(upload_to='userimages')
     height = models.IntegerField(null=True)
     weight = models.IntegerField(null=True)
-    gender = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True)
+    gender_id = models.ForeignKey(Gender, on_delete=models.CASCADE, null=True, verbose_name='gender')
     age_range_id = models.ForeignKey(AgeRange, on_delete=models.CASCADE, null=True, verbose_name='age')
 
     def __str__(self):
