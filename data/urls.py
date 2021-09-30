@@ -3,6 +3,7 @@ from .views import UserList, UserDetail, GenderList, GenderDetail, AgeRangeDetai
 
 
 urlpatterns = [
+
     path('users/', UserList.as_view()),
     path('users/<int:pk>', UserDetail.as_view()),
 
