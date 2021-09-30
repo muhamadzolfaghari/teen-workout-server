@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserList, UserDetail, GenderList, GenderDetail, AgeRangeDetail, AgeRangeList, WorkoutDetail, WorkoutList
+from .views import UserList, UserDetail, GenderList, GenderDetail, AgeRangeDetail, AgeRangeList, WorkoutDetail, WorkoutList, FoodList, FoodDetail, MealList, MealDetail
 
 
 urlpatterns = [
@@ -14,5 +14,11 @@ urlpatterns = [
     path('age/<int:pk>', AgeRangeDetail.as_view()),
 
     path('workout/', WorkoutList.as_view()),
-    path('workout/<int:pk>', WorkoutDetail.as_view())
+    path('workout/<int:pk>', WorkoutDetail.as_view()),
+
+    path('food/', FoodList.as_view()),
+    path('food/<int:pk>', FoodDetail.as_view()),
+
+    path('meal/', MealList.as_view()),
+    path('meal/<int:pk>', MealDetail.as_view())
 ]

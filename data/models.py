@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class AgeRange(models.Model):
     id = models.IntegerField(primary_key=True)
     ages = models.CharField(max_length=100)
@@ -12,6 +13,7 @@ class AgeRange(models.Model):
     def __str__(self):
         return self.ages
 
+
 class Gender(models.Model):
     genders = models.CharField(max_length=30)
 
@@ -20,6 +22,32 @@ class Gender(models.Model):
 
     def __str__(self):
         return self.genders
+
+
+class Food(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    image = models.ImageField(upload_to='foodimages')
+    measure_to_eat = models.IntegerField(null=True, verbose_name='how much?')
+
+    class Meta:
+        db_table = 'food'
+
+    def __str__(self):
+        return self.name
+
+
+class Meal(models.Model):
+    title = models.CharField(max_length=100, blank=True)
+    description = models.TextField(blank=True)
+    foods = models.ManyToManyField(Food)
+
+    class Meta:
+        db_table = 'meal'
+
+    def __str__(self):
+        return self.title
+
 
 class Workout(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -34,6 +62,7 @@ class Workout(models.Model):
 
     def __str__(self):
         return self.workout
+
 
 class User(models.Model):
     id = models.IntegerField(primary_key=True)
