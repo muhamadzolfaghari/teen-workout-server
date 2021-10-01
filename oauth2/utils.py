@@ -1,4 +1,7 @@
 import requests
+from django.db.models import QuerySet
+
+from data.models import AgeRanges
 
 
 def verify_access_token(access_token: str):
@@ -26,4 +29,3 @@ def get_accounts_info(access_token):
         image = user['photoLink']
 
         return {"name": name, "email": email, "image": image}
-

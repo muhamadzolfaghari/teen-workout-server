@@ -155,6 +155,6 @@ GOOGLE_OAUTH2_CLIENT_SECRET = 'm9jTPmdH_XpD8lR-jmHkebVC'
 
 # Trusted origins
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3001",
+    "http://localhost:3000",
     "https://teen-workout-server-alpha.vercel.app"
 ]
