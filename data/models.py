@@ -4,7 +4,7 @@ from django.db import models
 
 
 class AgeRanges(models.Model):
-    value = models.CharField(max_length=100)
+    value = models.CharField(max_length=100, verbose_name='age range')
 
     class Meta:
         db_table = 'age_ranges'
@@ -27,7 +27,7 @@ class Accounts(models.Model):
 
 
 class Genders(models.Model):
-    value = models.CharField(max_length=100)
+    value = models.CharField(max_length=100, verbose_name='gender')
 
     class Meta:
         db_table = 'genders'
