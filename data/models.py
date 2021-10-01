@@ -17,6 +17,9 @@ class Accounts(models.Model):
     id = models.IntegerField(primary_key=True)
     is_compelete = models.BooleanField()
 
+    class Meta:
+        db_table = 'accounts'
+
 
 # class User(models.Model):
 #     id = models.IntegerField(primary_key=True)
