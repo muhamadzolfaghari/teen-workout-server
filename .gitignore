@@ -1,4 +1,4 @@
 .vercel
 venv/
 .idea
-.env
+vercel_app/.env

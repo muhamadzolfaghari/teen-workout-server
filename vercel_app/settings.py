@@ -16,7 +16,6 @@ import environ
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -25,7 +24,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#this item protected
+# this item protected
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -36,7 +35,6 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '.vercel.app'
 ]
-
 
 # Application definition
 
@@ -53,7 +51,7 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
 
-    #our applications
+    # our applications
     'loginapp',
     'data.apps.DataConfig',
 
@@ -97,14 +95,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'vercel_app.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        #this items protected
+        # this items protected
         'NAME': env('DATABASE_NAME'),
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
@@ -112,8 +109,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -134,7 +129,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -148,7 +142,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
@@ -156,14 +149,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '{}/media'.format(BASE_DIR)
 
-#this items protected
-GOOGLE_OAUTH2_CLIENT_ID = env('GOOGLE_OAUTH2_CLIENT_ID')
-
-GOOGLE_OAUTH2_CLIENT_SECRET = env('GOOGLE_OAUTH2_CLIENT_SECRET')
-
 # Trusted origins
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://teen-workout-server-alpha.vercel.app"
+    env('CORS_ALLOWED_ORIGINS_DEV'),
+    env('CORS_ALLOWED_ORIGINS_PROD')
 ]
-
