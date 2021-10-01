@@ -14,13 +14,10 @@ class OAuth2:
 
             if not result.count():
                 Accounts(
-                    id=10,
                     email=account_info['email'],
                     name=account_info['name'],
                     image=account_info['image'],
-                    is_completed=False
                 ).save()
-                print('user not exits')
 
             return JsonResponse(account_info)
         else:
