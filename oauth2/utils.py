@@ -17,7 +17,7 @@ def verify_access_token(access_token: str):
         return False
 
 
-def get_accounts_info(access_token):
+def get_account_info(access_token):
     url = f"https://www.googleapis.com/drive/v3/about?fields=user&access_token={access_token}"
     response = requests.get(url)
 
