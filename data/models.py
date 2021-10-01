@@ -4,13 +4,14 @@ from django.db import models
 
 
 class AgeRanges(models.Model):
-    range = models.CharField(max_length=100)
+    value = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'age_ranges'
 
     def __str__(self):
-        return self.range
+        return self.value
+
 
 class Accounts(models.Model):
     is_completed = models.BooleanField(default=False)
@@ -24,14 +25,16 @@ class Accounts(models.Model):
     def __str__(self):
         return self.name
 
+
 class Genders(models.Model):
-    title = models.CharField(max_length=100)
+    value = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'genders'
 
     def __str__(self):
-        return self.title
+        return self.value
+
 
 class AccountsProfiles(models.Model):
     height = models.IntegerField()
@@ -42,7 +45,6 @@ class AccountsProfiles(models.Model):
 
     class Meta:
         db_table = 'accounts_profiles'
-
 
 
 # class User(models.Model):
