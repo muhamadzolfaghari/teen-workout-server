@@ -1,9 +1,7 @@
-from django.http import JsonResponse
-
+from django.http import JsonResponse, HttpResponse
 from data.models import AgeRanges, Genders, AccountsProfiles
 from oauth2.utils import verify_access_token
-from django.http import JsonResponse, HttpResponse
-import requests
+
 
 def metadata(void):
     age_ranges = [{"id": row.id, "range": row.range} for row in AgeRanges.objects.all()]
@@ -11,7 +9,8 @@ def metadata(void):
 
     return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
 
-def datasaver(json : dict):
+
+def store_account_profile(json: dict):
     if verify_access_token(json['access_token']) \
             and AgeRanges.objects.filter(id=json['age_range_id']) \
             and Genders.objects.filter(id=json['gender_id']) \
