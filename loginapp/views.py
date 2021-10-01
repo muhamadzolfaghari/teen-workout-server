@@ -1,7 +1,7 @@
 import requests
 from django.http import JsonResponse
 
-from oauth2.utils import get_user_info
+from oauth2.utils import get_accounts_info
 
 
 class Authentication:
@@ -9,7 +9,7 @@ class Authentication:
         url = f"https://www.googleapis.com/drive/v3/about?fields=user&access_token={access_token}"
         response = requests.get(url)
 
-        get_user_info(access_token)
+        get_accounts_info(access_token)
 
         if response.status_code == 200:
             JsonResponse.status_code = 200
