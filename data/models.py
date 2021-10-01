@@ -15,10 +15,27 @@ class AgeRanges(models.Model):
 
 class Accounts(models.Model):
     id = models.IntegerField(primary_key=True)
-    is_compelete = models.BooleanField()
+    is_compeleted = models.BooleanField()
+    image = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'accounts'
+
+    def __str__(self):
+        return self.name
+
+
+class AccountsProfiles(models.Model):
+    height = models.IntegerField()
+    weight = models.IntegerField()
+    age_range_id = models.ForeignKey(AgeRanges, on_delete=models.CASCADE)
+    account_id = models.ForeignKey(Accounts, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'accounts_profiles'
+
 
 
 # class User(models.Model):
