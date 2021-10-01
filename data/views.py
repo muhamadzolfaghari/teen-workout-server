@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from .models import AgeRanges, Accounts, AccountsProfiles#User, Gender,  Workout, Meal, Food
-from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
+from .models import AgeRanges, Accounts, AccountsProfiles, Genders#User, Gender,  Workout, Meal, Food
+from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
 # Create your views here.
 
 
@@ -28,6 +28,14 @@ class AccountsProfilesList(ListCreateAPIView):
 class AccountsProfilesDetail(RetrieveUpdateDestroyAPIView):
 	queryset = AccountsProfiles.objects.all()
 	serializer_class = AccountsProfilesSerializer
+
+class GendersList(ListCreateAPIView):
+	queryset = Genders.objects.all()
+	serializer_class = GendersSerializer
+
+class GendersDetail(RetrieveUpdateDestroyAPIView):
+	queryset = Genders.objects.all()
+	serializer_class = GendersSerializer
 
 # class UserList(ListCreateAPIView):
 # 	queryset = User.objects.all()

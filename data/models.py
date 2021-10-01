@@ -26,10 +26,20 @@ class Accounts(models.Model):
     def __str__(self):
         return self.name
 
+class Genders(models.Model):
+    id = models.IntegerField(primary_key=True)
+    title = models.CharField(max_length=100)
+
+    class Meta:
+        db_table = 'genders'
+
+    def __str__(self):
+        return self.title
 
 class AccountsProfiles(models.Model):
     height = models.IntegerField()
     weight = models.IntegerField()
+    gender = models.ForeignKey(Genders, on_delete=models.CASCADE)
     age_range = models.ForeignKey(AgeRanges, on_delete=models.CASCADE)
     account = models.ForeignKey(Accounts, on_delete=models.CASCADE)
 
