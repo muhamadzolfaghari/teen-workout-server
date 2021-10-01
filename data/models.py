@@ -4,7 +4,6 @@ from django.db import models
 
 
 class AgeRanges(models.Model):
-    id = models.BigAutoField(primary_key=True)
     range = models.CharField(max_length=100)
 
     class Meta:
@@ -14,7 +13,6 @@ class AgeRanges(models.Model):
         return self.range
 
 class Accounts(models.Model):
-    id = models.BigAutoField(primary_key=True)
     is_completed = models.BooleanField(default=False)
     image = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
@@ -27,7 +25,6 @@ class Accounts(models.Model):
         return self.name
 
 class Genders(models.Model):
-    id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=100)
 
     class Meta:

@@ -1,5 +1,5 @@
 from django.http import JsonResponse, HttpResponse
-from data.models import AgeRanges, Genders, AccountsProfiles
+from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
 from oauth2.utils import verify_access_token
 
 
@@ -23,7 +23,8 @@ def store_account_profile(json: dict):
             age_range=json['age_range_id'],
             gender_id=json['gender_id']
         ).save()
-
+        account = Accounts.objects.filter(id=json['id'])
+        account.update(is_completed=True)
         return HttpResponse(status=200)
 
     else:
