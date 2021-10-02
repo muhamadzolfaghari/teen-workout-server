@@ -1,8 +1,9 @@
+from django.core.handlers.wsgi import WSGIRequest
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
-
+import json
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
 from oauth2.utils import verify_access_token
 
@@ -19,22 +20,21 @@ def metadata(void):
 # @ensure_csrf_cookie
 @csrf_exempt
 @require_POST
-def store_account_profile(wsgi: dict):
-    print('is worked properly!')
+def store_account_profile(request: WSGIRequest):
+    body = json.loads(request.body)
 
-    json = wsgi.json()
-    if verify_access_token(json['access_token']):
-        account = Accounts.objects.filter(id=json['user_id'])
+    if verify_access_token(body['access_token']):
+        account = Accounts.objects.filter(id=body['account_id'])
 
         if account:
-            gender = Genders.objects.filter(value=json['gender']).first()
-            age_range = AgeRanges.objects.filter(value=json['age_range']).first()
+            gender = Genders.objects.filter(value=body['gender']).first()
+            age_range = AgeRanges.objects.filter(value=body['age_range']).first()
 
-            if gender and age_range and int(json['height']) and int(json['weight']):
+            if gender and age_range and int(body['height']) and int(body['weight']):
                 AccountsProfiles(
                     gender_id=gender.id,
-                    weight=json['weight'],
-                    height=json['height'],
+                    weight=body['weight'],
+                    height=body['height'],
                     age_range_id=age_range.id
                 ).save()
                 account.update(is_completed=True)
