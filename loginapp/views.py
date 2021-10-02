@@ -2,7 +2,7 @@ import os.path
 
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
-from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.csrf import requires_csrf_token, csrf_exempt
 
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
 from oauth2.utils import verify_access_token
@@ -19,7 +19,7 @@ def metadata(void):
 
     return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
 
-
+@csrf_exempt
 def store_account_profile(json: dict):
     if verify_access_token(json['access_token']):
         account = Accounts.objects.filter(id=json['user_id'])
