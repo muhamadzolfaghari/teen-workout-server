@@ -55,7 +55,7 @@ def register_account_profile(request: WSGIRequest):
     return send_unauth_response()
 
 @require_GET
-def account_info(id):
+def account_info(id: int):
     if id and int(id):
         account_profile = AccountsProfiles.objects.filter(account_id=id).first()
         if account_profile:
