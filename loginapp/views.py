@@ -23,6 +23,7 @@ def metadata(void):
 def store_account_profile(wsgi: dict):
     print('is worked properly!')
 
+
     json = wsgi.json()
     if verify_access_token(json['access_token']):
         account = Accounts.objects.filter(id=json['user_id'])
