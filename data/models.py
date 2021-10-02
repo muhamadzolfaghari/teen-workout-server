@@ -69,6 +69,21 @@ class Foods(models.Model):
     def __str__(self):
         return self.name
 
+
+class Workouts(models.Model):
+    name = models.CharField(max_length=100)
+    length = models.IntegerField(null=True)
+    repeat = models.IntegerField(null=True)
+    description = models.TextField()
+    age_range_id = models.ManyToManyField(AgeRanges)
+
+    class Meta:
+        db_table = 'workout'
+
+    def __str__(self):
+        return self.name
+
+
 # class User(models.Model):
 #     id = models.IntegerField(primary_key=True)
 #     name = models.CharField(max_length=100)
@@ -121,18 +136,6 @@ class Foods(models.Model):
 #         return self.title
 #
 #
-# class Workout(models.Model):
-#     id = models.IntegerField(primary_key=True)
-#     workout = models.CharField(max_length=100)
-#     length = models.IntegerField(null=True)
-#     repeat = models.IntegerField(null=True)
-#     description = models.TextField()
-#     age_range_id = models.ManyToManyField(AgeRanges, null=True)
-#
-#     class Meta:
-#         db_table = 'workout'
-#
-#     def __str__(self):
-#         return self.workout
+
 #
 #
