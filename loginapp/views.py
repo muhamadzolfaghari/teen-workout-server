@@ -60,4 +60,5 @@ def send_ok_response():
 
 
 def send_unauth_response():
+    JsonResponse.status_code = 401
     return JsonResponse({})
