@@ -47,6 +47,28 @@ class AccountsProfiles(models.Model):
         db_table = 'accounts_profiles'
 
 
+class MealTypes(models.Model):
+    value = models.CharField(max_length=100, verbose_name='meal type')
+
+    class Meta:
+        db_table = 'meal_types'
+
+    def __str__(self):
+        return self.value
+
+
+class Foods(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='foodsimages')
+    description = models.TextField()
+    meal_type = models.ForeignKey(MealTypes, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'foods'
+
+    def __str__(self):
+        return self.name
+
 # class User(models.Model):
 #     id = models.IntegerField(primary_key=True)
 #     name = models.CharField(max_length=100)

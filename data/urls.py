@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AgeRangesDetail, AgeRangesList, AccountsList, AccountsDetail, AccountsProfilesList, AccountsProfilesDetail, GendersList, GendersDetail #UserList, UserDetail, GenderList, GenderDetail, WorkoutDetail, WorkoutList, FoodList, FoodDetail, MealList, MealDetail
+from .views import AgeRangesDetail, AgeRangesList, AccountsList, AccountsDetail, AccountsProfilesList, AccountsProfilesDetail, GendersList, GendersDetail, FoodsList, FoodsDetail, MealTypesList, MealTypesDetail #UserList, UserDetail, GenderList, GenderDetail, WorkoutDetail, WorkoutList, FoodList, FoodDetail, MealList, MealDetail
 
 
 urlpatterns = [
@@ -14,7 +14,13 @@ urlpatterns = [
     path('profiels/<int:pk>', AccountsProfilesDetail.as_view()),
 
     path('genders/', GendersList.as_view()),
-    path('genders/<int:pk>', GendersDetail.as_view())
+    path('genders/<int:pk>', GendersDetail.as_view()),
+
+    path('foods/', FoodsList.as_view()),
+    path('foods/<int:pk>', FoodsDetail.as_view()),
+
+    path('meal-types/', MealTypesList.as_view()),
+    path('meal-types/<int:pk>', MealTypesDetail.as_view())
 
     # path('users/', UserList.as_view()),
     # path('users/<int:pk>', UserDetail.as_view()),
