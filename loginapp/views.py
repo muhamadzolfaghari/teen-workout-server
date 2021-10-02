@@ -4,7 +4,7 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST, require_GET
+from django.views.decorators.http import require_POST
 
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
 from oauth2.utils import verify_access_token, send_unauth_response, send_ok_response
@@ -55,7 +55,7 @@ def register_account_profile(request: WSGIRequest):
     return send_unauth_response()
 
 
-def get_account_profile(account_id: int, access_token: str):
+def get_account_profile(request, account_id: int, access_token: str):
     if account_id and int(account_id):
         account_profile = AccountsProfiles.objects.filter(account_id).first()
 
