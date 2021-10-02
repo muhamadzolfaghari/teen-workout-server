@@ -10,7 +10,7 @@ from oauth2.utils import verify_access_token
 
 @requires_csrf_token
 def get_csrf(request):
-    return render(request,  'index.html', {"csrf_token": 'dfsaf'})
+    return render(request,  'loginapp/index.html', {"csrf_token": 'dfsaf'})
 
 
 def metadata(void):

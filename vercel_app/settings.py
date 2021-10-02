@@ -80,7 +80,7 @@ ROOT_URLCONF = 'vercel_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -156,5 +156,5 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 TEMPLATE_DIRS = (
-    os.path.join('templates'),
+    os.path.join('../templates'),
 )
