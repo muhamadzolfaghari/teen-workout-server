@@ -155,4 +155,6 @@ CORS_ALLOWED_ORIGINS = [
     env('CORS_ALLOWED_ORIGINS_PROD')
 ]
 
-
+TEMPLATE_DIRS = (
+    os.path.join('templates'),
+)
