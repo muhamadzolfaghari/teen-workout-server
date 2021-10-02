@@ -8,5 +8,5 @@ urlpatterns = [
     path('metadata/', metadata),
     path('accounts/profile/', register_account_profile),
     path('auth/csrf/', get_csrf),
-    path('accounts/profile/info/', account_info)
+    path('accounts/profile/<int:id>/<str:access_token>', account_info)
 ]
