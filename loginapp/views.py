@@ -56,8 +56,11 @@ def register_account_profile(request: WSGIRequest):
 
 
 def get_account_profile(request, account_id: int, access_token: str):
+    if not verify_access_token(access_token):
+        return send_unauth_response()
+
     if account_id and int(account_id):
-        account_profile = AccountsProfiles.objects.filter(account_id).first()
+        account_profile = AccountsProfiles.objects.filter(account_id=account_id).first()
 
         if account_profile:
             return send_ok_response(account_profile)
