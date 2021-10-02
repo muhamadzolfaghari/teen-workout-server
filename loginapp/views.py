@@ -1,6 +1,6 @@
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
-from django.views.decorators.csrf import requires_csrf_token, ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
@@ -21,7 +21,6 @@ def metadata(void):
 @require_POST
 def store_account_profile(wsgi: dict):
     print('is worked properly!')
-
 
     json = wsgi.json()
     if verify_access_token(json['access_token']):
