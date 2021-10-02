@@ -7,7 +7,6 @@ from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
 from oauth2.utils import verify_access_token
 
 
-@requires_csrf_token
 def get_csrf(request):
     return render(request, 'loginapp/index.html')
 
@@ -17,8 +16,8 @@ def metadata(void):
     # return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
 
 
-# @csrf_exempt
 # @ensure_csrf_cookie
+@csrf_exempt
 @require_POST
 def store_account_profile(wsgi: dict):
     print('is worked properly!')
