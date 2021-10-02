@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
-from oauth2.utils import verify_access_token
+from oauth2.utils import verify_access_token, send_unauth_response, send_ok_response
 
 
 def get_csrf(request):
@@ -22,7 +22,7 @@ def metadata(void):
 # @ensure_csrf_cookie
 @csrf_exempt
 @require_POST
-def store_account_profile(request: WSGIRequest):
+def register_account_profile(request: WSGIRequest):
     body = json.loads(request.body)
 
     if not int(body['account_id']):
@@ -55,10 +55,3 @@ def store_account_profile(request: WSGIRequest):
     return send_unauth_response()
 
 
-def send_ok_response():
-    return JsonResponse({})
-
-
-def send_unauth_response():
-    JsonResponse.status_code = 401
-    return JsonResponse({})

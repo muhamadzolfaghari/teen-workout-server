@@ -1,4 +1,5 @@
 import requests
+from django.http import JsonResponse
 
 
 def verify_access_token(access_token: str):
@@ -26,3 +27,15 @@ def get_account_info(access_token):
         image = user['photoLink']
 
         return {"name": name, "email": email, "image": image}
+
+
+def send_ok_response(data=None):
+    if data is None:
+        data = {}
+    JsonResponse.status_code = 200
+    return JsonResponse(data)
+
+
+def send_unauth_response():
+    JsonResponse.status_code = 401
+    return JsonResponse({})

@@ -2,6 +2,7 @@ from django.http import JsonResponse
 
 from data.models import Accounts
 from oauth2 import utils
+from oauth2.utils import send_ok_response, send_unauth_response
 
 
 class OAuth2:
@@ -25,7 +26,6 @@ class OAuth2:
                 account_info['id'] = account.id
                 account_info['is_completed'] = account.is_completed
 
-            return JsonResponse(account_info)
+            return send_ok_response(account_info)
         else:
-            JsonResponse.status_code = 401
-            return JsonResponse({})
+            return send_unauth_response()
