@@ -54,14 +54,12 @@ def register_account_profile(request: WSGIRequest):
 
     return send_unauth_response()
 
-@require_GET
-def account_info(id: int):
-    body = json.loads(id.body)
-    if id and int(body['account_id']):
-        account_profile = AccountsProfiles.objects.filter(account_id=id).first()
+
+def get_account_profile(account_id: int, access_token: str):
+    if account_id and int(account_id):
+        account_profile = AccountsProfiles.objects.filter(account_id).first()
+
         if account_profile:
-            send_ok_response()
-            return account_profile
+            return send_ok_response(account_profile)
+
     return send_unauth_response()
-
-
