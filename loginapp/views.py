@@ -51,8 +51,8 @@ def store_account_profile(request: WSGIRequest):
                 account.update(is_completed=True)
 
                 return send_ok_response()
-    else:
-        return send_unauth_response()
+
+    return send_unauth_response()
 
 
 def send_ok_response():
