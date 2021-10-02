@@ -72,16 +72,24 @@ class Foods(models.Model):
 
 class Workouts(models.Model):
     name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='workoutsimages', null=True)
+    description = models.TextField()
+    age_range = models.ManyToManyField(AgeRanges)
     length = models.IntegerField(null=True)
     repeat = models.IntegerField(null=True)
-    description = models.TextField()
-    age_range_id = models.ManyToManyField(AgeRanges)
 
     class Meta:
         db_table = 'workout'
 
     def __str__(self):
         return self.name
+
+class DailyWorkouts(models.Model):
+    day = models.IntegerField()
+    workouts = models.ManyToManyField(Workouts)
+
+    class Meta:
+        db_table = 'daily_workouts'
 
 
 # class User(models.Model):

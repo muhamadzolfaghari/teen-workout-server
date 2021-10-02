@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts  # User, Workout, Gender, Food, Meal
+from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts  # User, Workout, Gender, Food, Meal
 
 
 class AgeRangesSerializer(serializers.ModelSerializer):
@@ -42,6 +42,10 @@ class WorkoutsSerializer(serializers.ModelSerializer):
         model = Workouts
         fields = '__all__'
 
+class DailyWorkoutsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DailyWorkouts
+        fields = '__all__'
 
 # class UserSerializer(serializers.ModelSerializer):
 #     class Meta:
