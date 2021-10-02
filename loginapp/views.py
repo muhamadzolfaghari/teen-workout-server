@@ -56,7 +56,8 @@ def register_account_profile(request: WSGIRequest):
 
 @require_GET
 def account_info(id: int):
-    if id and int(id):
+    body = json.loads(id.body)
+    if id and int(body['account_id']):
         account_profile = AccountsProfiles.objects.filter(account_id=id).first()
         if account_profile:
             send_ok_response()
