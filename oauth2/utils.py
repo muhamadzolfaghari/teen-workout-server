@@ -1,7 +1,4 @@
 import requests
-from django.db.models import QuerySet
-
-from data.models import AgeRanges
 
 
 def verify_access_token(access_token: str):

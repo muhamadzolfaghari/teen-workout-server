@@ -10,14 +10,12 @@ from oauth2.utils import verify_access_token
 
 @requires_csrf_token
 def get_csrf(request):
-    return render(request,  'loginapp/index.html', {"csrf_token": 'dfsaf'})
+    return render(request,  'loginapp/index.html')
 
 
 def metadata(void):
-    age_ranges = [{"id": row.id, "value": row.range} for row in AgeRanges.objects.all()]
-    genders = [{"id": row.id, "value": row.title} for row in Genders.objects.all()]
-
-    return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
+    return JsonResponse({})
+    # return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
 
 @csrf_exempt
 @require_POST
