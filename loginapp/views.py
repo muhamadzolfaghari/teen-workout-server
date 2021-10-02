@@ -14,8 +14,8 @@ def get_csrf(request):
 
 
 def metadata(void):
-    age_ranges = [{"id": row.id, "range": row.range} for row in AgeRanges.objects.all()]
-    genders = [{"id": row.id, "range": row.title} for row in Genders.objects.all()]
+    age_ranges = [{"id": row.id, "value": row.range} for row in AgeRanges.objects.all()]
+    genders = [{"id": row.id, "value": row.title} for row in Genders.objects.all()]
 
     return JsonResponse({"age_ranges": age_ranges, 'genders': genders})
 
