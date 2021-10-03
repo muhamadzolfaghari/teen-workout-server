@@ -132,30 +132,40 @@ def get_bmi(request, profile_id: int):
 	return send_unauth_response()
 
 
-def update_profile(request: WSGIRequest):
-	body = json.loads(request.body)
 
-	if body['account_id'] and int(body['account_id']):
-		account_profile = AccountsProfiles.objects.filter(id=body['account_id'])
 
-		if body['weight'] and int(body['weight']):
-			account_profile.update(weight=body['weight'])
 
-		if body['height'] and int(body['height']):
-			account_profile.update(height=body['height'])
 
-		return send_ok_response()
 
-	return send_unauth_response()
 
-def logout(request: WSGIRequest):
-	body = json.loads(request.body)
-	if body['account_id'] and int(body['account_id']):
-		account = Accounts.objects.get(id=body['account_id'])
-		if account:
-			account.delete()
-			return send_ok_response()
-	return send_unauth_response()
+
+
+
+
+# def update_profile(request: WSGIRequest):
+# 	body = json.loads(request.body)
+#
+# 	if body['account_id'] and int(body['account_id']):
+# 		account_profile = AccountsProfiles.objects.filter(id=body['account_id'])
+#
+# 		if body['weight'] and int(body['weight']):
+# 			account_profile.update(weight=body['weight'])
+#
+# 		if body['height'] and int(body['height']):
+# 			account_profile.update(height=body['height'])
+#
+# 		return send_ok_response()
+#
+# 	return send_unauth_response()
+#
+# def logout(request: WSGIRequest):
+# 	body = json.loads(request.body)
+# 	if body['account_id'] and int(body['account_id']):
+# 		account = Accounts.objects.get(id=body['account_id'])
+# 		if account:
+# 			account.delete()
+# 			return send_ok_response()
+# 	return send_unauth_response()
 
 # def erase_account(request: WSGIRequest)
 # 	body = json.loads(request.body)
