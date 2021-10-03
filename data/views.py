@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from django.http import JsonResponse
 from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts#User, Gender,  Workout, Meal, Food
 from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer, FoodsSerializer, MealTypesSerializer, WorkoutsSerializer, DailyWorkoutsSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
-from oauth2.utils import send_unauth_response
+from oauth2.utils import send_unauth_response, send_ok_response
 # Create your views here.
 
 
@@ -100,6 +100,7 @@ class AgeWorkouts(APIView):
 					return Response(serializer.data)
 		return send_unauth_response()
 
+
 class MealTypeFoods(APIView):
 	def get(self, request, meal_type_id: int):
 		if int(meal_type_id):
@@ -110,6 +111,7 @@ class MealTypeFoods(APIView):
 					serializer = FoodsSerializer(foods, many=True)
 					return Response(serializer.data)
 		return send_unauth_response()
+
 
 def get_bmi(request, profile_id: int):
 	if int(profile_id):
@@ -123,12 +125,45 @@ def get_bmi(request, profile_id: int):
 			elif bmi < 29.9 and bmi > 24.8:
 				bmi_massage = 'mmmmmm! no it is not good! You are overweight and you need to return to a healthy and normal weight range with proper exercise and diet.'
 			else:
-				bmi_massage = 'No, no, this is not good at all. You are in the dangerous range of the standard body mass index and it indicates that you are obese. If you do not lose weight, you may face a variety of problems and diseases such as diabetes, cardiovascular disease, high cholesterol, etc. You should start exercising and eating right as soon as possible.'
+				bmi_massage = 'No no... this is not good at all!! You are in the dangerous range of the standard body mass index and it indicates that you are obese. If you do not lose weight, you may face a variety of problems and diseases such as diabetes, cardiovascular disease, high cholesterol, etc. You should start exercising and eating right as soon as possible.'
 
-			return JsonResponse({'bmi' : bmi, 'massage' : bmi_massage})
+			return JsonResponse({'bmi': bmi, 'massage': bmi_massage})
 
 	return send_unauth_response()
 
+
+def update_profile(request: WSGIRequest):
+	body = json.loads(request.body)
+
+	if body['account_id'] and int(body['account_id']):
+		account_profile = AccountsProfiles.objects.filter(id=body['account_id'])
+
+		if body['weight'] and int(body['weight']):
+			account_profile.update(weight=body['weight'])
+
+		if body['height'] and int(body['height']):
+			account_profile.update(height=body['height'])
+
+		return send_ok_response()
+
+	return send_unauth_response()
+
+def logout(request: WSGIRequest):
+	body = json.loads(request.body)
+	if body['account_id'] and int(body['account_id']):
+		account = Accounts.objects.get(id=body['account_id'])
+		if account:
+			account.delete()
+			return send_ok_response()
+	return send_unauth_response()
+
+# def erase_account(request: WSGIRequest)
+# 	body = json.loads(request.body)
+# 	if body['account_id'] and int(body['account_id']):
+# 		account = Accounts.objects.get(id=body['account_id'])
+# 		account_profile = AccountsProfiles.objects.get(id=body['account_id'])
+# 		if account and account_profile:
+# 			account
 
 # class UserList(ListCreateAPIView):
 # 	queryset = User.objects.all()
