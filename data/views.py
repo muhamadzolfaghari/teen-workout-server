@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.http import JsonResponse
 from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts#User, Gender,  Workout, Meal, Food
 from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer, FoodsSerializer, MealTypesSerializer, WorkoutsSerializer, DailyWorkoutsSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
 from oauth2.utils import send_unauth_response
@@ -109,6 +110,24 @@ class MealTypeFoods(APIView):
 					serializer = FoodsSerializer(foods, many=True)
 					return Response(serializer.data)
 		return send_unauth_response()
+
+def get_bmi(request, profile_id: int):
+	if int(profile_id):
+		profile = AccountsProfiles.objects.filter(id=profile_id).first()
+		if profile:
+			bmi = profile.height ** 2 / profile.weight
+			if bmi < 18.5:
+				bmi_massage = 'Opps!! You weigh less than the standard amount. You need to have more nutrition and more proper. Do not worry, just eat the selected diet.'
+			elif bmi < 24.9 and bmi > 18.4:
+				bmi_massage = 'Yesss! Your fitness is great! It is better to maintain this fitness by following a diet and exercise.'
+			elif bmi < 29.9 and bmi > 24.8:
+				bmi_massage = 'mmmmmm! no it is not good! You are overweight and you need to return to a healthy and normal weight range with proper exercise and diet.'
+			else:
+				bmi_massage = 'No, no, this is not good at all. You are in the dangerous range of the standard body mass index and it indicates that you are obese. If you do not lose weight, you may face a variety of problems and diseases such as diabetes, cardiovascular disease, high cholesterol, etc. You should start exercising and eating right as soon as possible.'
+
+			return JsonResponse({'bmi' : bmi, 'massage' : bmi_massage})
+
+	return send_unauth_response()
 
 
 # class UserList(ListCreateAPIView):
