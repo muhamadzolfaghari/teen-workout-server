@@ -30,10 +30,8 @@ def get_account_info(access_token):
 
 
 def send_ok_response(data=None):
-    if data is None:
-        data = {}
     JsonResponse.status_code = 200
-    return JsonResponse(data)
+    return JsonResponse(data or {})
 
 
 def send_unauth_response():
