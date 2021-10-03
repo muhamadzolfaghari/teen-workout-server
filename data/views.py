@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts#User, Gender,  Workout, Meal, Food
 from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer, FoodsSerializer, MealTypesSerializer, WorkoutsSerializer, DailyWorkoutsSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
+from oauth2.utils import send_unauth_response
 # Create your views here.
 
 
@@ -64,6 +67,7 @@ class MealTypesDetail(RetrieveUpdateDestroyAPIView):
 	queryset = MealTypes.objects.all()
 	serializer_class = MealTypesSerializer
 
+
 class WorkoutsList(ListCreateAPIView):
 	queryset = Workouts.objects.all()
 	serializer_class = WorkoutsSerializer
@@ -82,6 +86,30 @@ class DailyWorkoutsList(ListCreateAPIView):
 class DailyWorkoutsDetail(RetrieveUpdateDestroyAPIView):
 	queryset = DailyWorkouts.objects.all()
 	serializer_class = DailyWorkoutsSerializer
+
+
+class AgeWorkouts(APIView):
+	def get(self, request, age_range_id: int):
+		if int(age_range_id):
+			age_range = AgeRanges.objects.filter(id=age_range_id).first()
+			if age_range:
+				workouts = Workouts.objects.filter(age_range=age_range.id)
+				if workouts:
+					serializer = WorkoutsSerializer(workouts, many=True)
+					return Response(serializer.data)
+		return send_unauth_response()
+
+class MealTypeFoods(APIView):
+	def get(self, request, meal_type_id: int):
+		if int(meal_type_id):
+			meal_type = MealTypes.objects.filter(id=meal_type_id).first()
+			if meal_type:
+				foods = Foods.objects.filter(meal_type=meal_type.id)
+				if foods:
+					serializer = FoodsSerializer(foods, many=True)
+					return Response(serializer.data)
+		return send_unauth_response()
+
 
 # class UserList(ListCreateAPIView):
 # 	queryset = User.objects.all()
