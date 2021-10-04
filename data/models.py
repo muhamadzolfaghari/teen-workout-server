@@ -74,22 +74,31 @@ class Workouts(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='workoutsimages', null=True)
     description = models.TextField()
-    age_range = models.ManyToManyField(AgeRanges)
-    length = models.IntegerField(null=True)
-    repeat = models.IntegerField(null=True)
 
     class Meta:
-        db_table = 'workout'
+        db_table = 'workouts'
 
     def __str__(self):
         return self.name
-
 class DailyWorkouts(models.Model):
-    day = models.IntegerField()
-    workouts = models.ManyToManyField(Workouts)
+    workout = models.ForeignKey(Workouts, on_delete=models.CASCADE)
+    repeat = models.IntegerField(null=True)
+    length = models.IntegerField(null=True)
+    age_range = models.ManyToManyField(AgeRanges)
 
     class Meta:
         db_table = 'daily_workouts'
+
+    def __str__(self):
+        return self.workout
+
+class WorkoutsDays(models.Model):
+    day = models.IntegerField()
+    workouts = models.ManyToManyField(DailyWorkouts)
+    age_range = models.ForeignKey(AgeRanges, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'workouts_days'
 
 
 # class User(models.Model):

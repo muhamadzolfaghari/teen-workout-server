@@ -3,8 +3,8 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import JsonResponse
-from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts#User, Gender,  Workout, Meal, Food
-from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer, FoodsSerializer, MealTypesSerializer, WorkoutsSerializer, DailyWorkoutsSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
+from .models import AgeRanges, Accounts, AccountsProfiles, Genders, Foods, MealTypes, Workouts, DailyWorkouts, WorkoutsDays #User, Gender,  Workout, Meal, Food
+from .serializers import AgeRangesSerializer, AccountsSerializer, AccountsProfilesSerializer, GendersSerializer, FoodsSerializer, MealTypesSerializer, WorkoutsSerializer, DailyWorkoutsSerializer, WorkoutsDaysSerializer #UserSerializer, GenderSerializer,  WorkoutSerializer, MealSerializer, FoodSerializer
 from oauth2.utils import send_unauth_response, send_ok_response
 # Create your views here.
 
@@ -88,6 +88,15 @@ class DailyWorkoutsDetail(RetrieveUpdateDestroyAPIView):
 	queryset = DailyWorkouts.objects.all()
 	serializer_class = DailyWorkoutsSerializer
 
+
+class WorkoutsDaysList(ListCreateAPIView):
+	queryset = WorkoutsDays.objects.all()
+	serializer_class = WorkoutsDaysSerializer
+
+
+class WorkoutsDaysDetail(RetrieveUpdateDestroyAPIView):
+	queryset = WorkoutsDays.objects.all()
+	serializer_class = WorkoutsDaysSerializer
 
 class AgeWorkouts(APIView):
 	def get(self, request, age_range_id: int):
