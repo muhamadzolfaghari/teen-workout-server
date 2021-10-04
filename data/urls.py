@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AgeRangesDetail, AgeRangesList, AccountsList, AccountsDetail, AccountsProfilesList, AccountsProfilesDetail, GendersList, GendersDetail, FoodsList, FoodsDetail, MealTypesList, MealTypesDetail, WorkoutsList, WorkoutsDetail, DailyWorkoutsList, DailyWorkoutsDetail, AgeWorkouts, MealTypeFoods, get_bmi  #UserList, UserDetail, GenderList, GenderDetail, WorkoutDetail, WorkoutList, FoodList, FoodDetail, MealList, MealDetail
+from .views import AgeRangesDetail, AgeRangesList, AccountsList, AccountsDetail, AccountsProfilesList, AccountsProfilesDetail, GendersList, GendersDetail, FoodsList, FoodsDetail, MealTypesList, MealTypesDetail, WorkoutsList, WorkoutsDetail, DailyWorkoutsList, DailyWorkoutsDetail, WorkoutsDaysList, WorkoutsDaysDetail, AgeWorkouts, MealTypeFoods, get_bmi  #UserList, UserDetail, GenderList, GenderDetail, WorkoutDetail, WorkoutList, FoodList, FoodDetail, MealList, MealDetail
 
 
 urlpatterns = [
@@ -27,6 +27,9 @@ urlpatterns = [
 
     path('daily-workouts/', DailyWorkoutsList.as_view()),
     path('daily-workouts/<int:pk>', DailyWorkoutsDetail.as_view()),
+
+    path('days/', WorkoutsDaysList.as_view()),
+    path('days/<int:pk>', WorkoutsDaysDetail.as_view()),
 
     path('age-workouts/<int:age_range_id>/', AgeWorkouts.as_view()),
     path('meal-type-foods/<int:meal_type_id>/', MealTypeFoods.as_view()),
