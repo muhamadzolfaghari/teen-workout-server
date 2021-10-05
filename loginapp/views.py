@@ -98,9 +98,17 @@ def get_foods(request: WSGIRequest, *args, **kwargs):
     if not verify_access_token(access_token):
         return send_unauth_response()
 
-    foods = Foods.objects.prefetch_related('meal_type_id', 'meal_types.id')
+    foods = Foods.objects.select_related('meal_type')
+    return send_ok_response({
+        "results": [{
+            "id": food.id,
+            "name": food.name,
+            "description": food.description,
+            "meal_type": food.meal_type.value,
+            "image": settings.MEDIA_URL + 'foods/' + food.image
+        } for food in foods]
+    })
 
-    return send_ok_response()
 
 def get_workouts(request: WSGIRequest, *args, **kwargs):
     access_token = kwargs.get('access_token')

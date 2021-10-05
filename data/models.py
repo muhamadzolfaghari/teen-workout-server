@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -83,6 +84,7 @@ class Workouts(models.Model):
     def __str__(self):
         return self.name
 
+
 class DailyWorkouts(models.Model):
     workout = models.ForeignKey(Workouts, on_delete=models.CASCADE)
     repeat = models.IntegerField(null=True)
@@ -95,6 +97,7 @@ class DailyWorkouts(models.Model):
     def __str__(self):
         return self.workout
 
+
 class WorkoutsDays(models.Model):
     day = models.IntegerField()
     workouts = models.ManyToManyField(DailyWorkouts)
@@ -102,7 +105,6 @@ class WorkoutsDays(models.Model):
 
     class Meta:
         db_table = 'workouts_days'
-
 
 # class User(models.Model):
 #     id = models.IntegerField(primary_key=True)
