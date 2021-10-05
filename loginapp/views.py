@@ -100,14 +100,25 @@ def get_foods(request: WSGIRequest, *args, **kwargs):
 
     foods = Foods.objects.select_related('meal_type')
     return send_ok_response({
-        "results": [{
-            "id": food.id,
-            "name": food.name,
-            "description": food.description,
-            "meal_type": food.meal_type.value,
-            "image": settings.MEDIA_URL + 'foods/' + food.image
-        } for food in foods]
+        "results": [get_food_dict(food) for food in foods]
     })
+
+
+def get_recommendations_foods(request: WSGIRequest, *args, **kwargs):
+    access_token = kwargs.get('access_token')
+
+    if not verify_access_token(access_token):
+        return send_unauth_response()
+
+    lunch = Foods.objects.filter(meal_type__value='lunch').first()
+    dinner = Foods.objects.filter(meal_type__value='dinner').first()
+    breakfast = Foods.objects.filter(meal_type__value='breakfast').first()
+
+    return send_ok_response({"results": [
+        get_food_dict(breakfast),
+        get_food_dict(lunch),
+        get_food_dict(dinner),
+    ]})
 
 
 def get_workouts(request: WSGIRequest, *args, **kwargs):
@@ -127,3 +138,13 @@ def get_workouts(request: WSGIRequest, *args, **kwargs):
             "image": settings.MEDIA_URL + 'workouts/' + workout.image
         } for workout in workouts]
     })
+
+
+def get_food_dict(food):
+    return {
+        "id": food.id,
+        "name": food.name,
+        "description": food.description,
+        "meal_type": food.meal_type.value,
+        "image": settings.MEDIA_URL + 'foods/' + food.image
+    }
