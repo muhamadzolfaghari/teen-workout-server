@@ -1,8 +1,30 @@
-# Django running on Vercel
-
+# Teen Workout Server
+This is a server that implemented for (Teen Workout Project)[https://github.com/muhamadzolfaghari/teen-workout] that enables users to store their own profile of health and shape of the body to helps them to keep in the shape of improving the muscles.
+This project deployed on vercel and avaiable for test in address. [Teen Workout Server Demo](https://teen-workout-server.vercel.app).
 
 ## Tutorial
 
+### How to implement
+To developing and running in locally, you should use to create a file to determine the environment vars that running the app depends on those.
+This file must be named under `.env` or `.env.development` or so on.
+The values for running the app may be like the following.
+
+
+#### The Secret key for APIs and protected objects
+SECRET_KEY={YOUR_OWN_SECERT_KEY}
+
+#### The Database configurations
+DATABASE_USER={YOUR_OWN_DATABASE_USER}
+DATABASE_PASSWORD={YOUR_OWN_DATABASE_PASSWORD}
+DATABASE_NAME={YOUR_OWN_DATABASE_NAME}
+DATABASE_HOST={YOUR_OWN_DATABASE_HOST}
+
+#### Allowed site for development and production mode
+CORS_ALLOWED_ORIGINS_DEV=http://localhost:3000
+CORS_ALLOWED_ORIGINS_PROD= {YOUR_OWN_SERVER_FOR_PRODUCTION}
+
+# Development mode
+DEBUG=True
 
 ### Install Django
 
