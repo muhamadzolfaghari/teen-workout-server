@@ -4,9 +4,8 @@ from django.core.handlers.wsgi import WSGIRequest
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
 
-from data.models import AgeRanges, Genders, AccountsProfiles, Accounts
+from data.models import AgeRanges, Genders, AccountsProfiles, Accounts, Workouts
 from oauth2.utils import verify_access_token, send_unauth_response, send_ok_response
 
 
@@ -90,3 +89,20 @@ def get_account_profile(kwargs):
             })
 
     return send_unauth_response()
+
+
+def get_workouts(access_token: str):
+    print(access_token)
+    if not verify_access_token(access_token):
+        return send_unauth_response()
+
+    workouts = Workouts.objects.all()
+    return send_ok_response({
+        "results": [{
+            "id": workout.id,
+            "name": workout.name,
+            "length": workout.length,
+            "repeat": workout.repeat,
+            "image": workout.image.url + workout.image
+        } for workout in workouts]
+    })
