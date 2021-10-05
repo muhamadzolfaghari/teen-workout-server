@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from data.models import AgeRanges, Genders, AccountsProfiles, Accounts, Workouts
 from oauth2.utils import verify_access_token, send_unauth_response, send_ok_response
+from vercel_app import settings
 
 
 def get_csrf(request):
@@ -91,18 +92,20 @@ def get_account_profile(kwargs):
     return send_unauth_response()
 
 
-class WorkoutsRoute:
-    def get_workouts(self, access_token: str):
-        if not verify_access_token(access_token):
-            return send_unauth_response()
+def get_workouts(request: WSGIRequest, *args, **kwargs):
+    access_token = kwargs.get('access_token')
 
-        workouts = Workouts.objects.all()
-        return send_ok_response({
-            "results": [{
-                "id": workout.id,
-                "name": workout.name,
-                "length": workout.length,
-                "repeat": workout.repeat,
-                "image": workout.image.url + workout.image
-            } for workout in workouts]
-        })
+    if not verify_access_token(access_token):
+        return send_unauth_response()
+
+    workouts = Workouts.objects.all()
+    return send_ok_response({
+        "results": [{
+            "id": workout.id,
+            "name": workout.name,
+            "length": workout.length,
+            "repeat": workout.repeat,
+            "description": workout.description,
+            "image":   settings.MEDIA_URL + 'workouts/' + workout.image
+        } for workout in workouts]
+    })
