@@ -1,5 +1,5 @@
 # Teen Workout Server
-This is a server that implemented for (Teen Workout Project)[https://github.com/muhamadzolfaghari/teen-workout] that enables users to store their own profile of health and shape of the body to helps them to keep in the shape of improving the muscles.
+This is a server that implemented for [Teen Workout Project](https://github.com/muhamadzolfaghari/teen-workout) that enables users to store their own profile of health and shape of the body to helps them to keep in the shape of improving the muscles.
 This project deployed on vercel and avaiable for test in address. [Teen Workout Server Demo](https://teen-workout-server.vercel.app).
 
 ## Tutorial
