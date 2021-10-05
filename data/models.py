@@ -59,7 +59,7 @@ class MealTypes(models.Model):
 
 class Foods(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='foodsimages')
+    image = models.CharField(max_length=200)
     description = models.TextField()
     meal_type = models.ForeignKey(MealTypes, on_delete=models.CASCADE)
 
