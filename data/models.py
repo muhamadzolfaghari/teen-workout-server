@@ -72,14 +72,17 @@ class Foods(models.Model):
 
 class Workouts(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='workoutsimages', null=True)
+    image = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField()
+    repeat = models.IntegerField(null=True)
+    length = models.CharField(max_length=100, null=True)
 
     class Meta:
         db_table = 'workouts'
 
     def __str__(self):
         return self.name
+
 class DailyWorkouts(models.Model):
     workout = models.ForeignKey(Workouts, on_delete=models.CASCADE)
     repeat = models.IntegerField(null=True)
