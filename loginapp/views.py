@@ -91,18 +91,18 @@ def get_account_profile(kwargs):
     return send_unauth_response()
 
 
-def get_workouts(access_token: str):
-    print(access_token)
-    if not verify_access_token(access_token):
-        return send_unauth_response()
+class WorkoutsRoute:
+    def get_workouts(self, access_token: str):
+        if not verify_access_token(access_token):
+            return send_unauth_response()
 
-    workouts = Workouts.objects.all()
-    return send_ok_response({
-        "results": [{
-            "id": workout.id,
-            "name": workout.name,
-            "length": workout.length,
-            "repeat": workout.repeat,
-            "image": workout.image.url + workout.image
-        } for workout in workouts]
-    })
+        workouts = Workouts.objects.all()
+        return send_ok_response({
+            "results": [{
+                "id": workout.id,
+                "name": workout.name,
+                "length": workout.length,
+                "repeat": workout.repeat,
+                "image": workout.image.url + workout.image
+            } for workout in workouts]
+        })
